@@ -22,7 +22,7 @@ ORANGE='\033[0;33m'
 CYAN='\033[0;36m'
 
 # Set local variables for use in script
-BASTION_DIR="$HOME/bot-discord"
+BASTION_DIR="$HOME/Bot-Discord"
 BASTION_SETTINGS_DIR="$BASTION_DIR/settings"
 BASTION_REPO="https://github.com/benjaminlecerf/Bot-Discord.git"
 
@@ -164,9 +164,9 @@ function install::bastion() {
 
   cd "$HOME"
 
-  if [ -d "bot-discord" ]; then
-    if [ -d "bot-discord-Old" ]; then sudo rm -rf Bastion-Old; fi
-    sudo mv -f bot-discord bot-discord-Old
+  if [ -d "Bot-Discord" ]; then
+    if [ -d "Bot-Discord-Old" ]; then sudo rm -rf Bastion-Old; fi
+    sudo mv -f Bot-Discord Bot-Discord-Old
   fi
 
   git clone -b stable -q --depth 1 "$BASTION_REPO" || \
