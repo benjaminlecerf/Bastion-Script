@@ -22,9 +22,9 @@ ORANGE='\033[0;33m'
 CYAN='\033[0;36m'
 
 # Set local variables for use in script
-BASTION_DIR="$HOME/Bastion"
+BASTION_DIR="$HOME/bot-discord"
 BASTION_SETTINGS_DIR="$BASTION_DIR/settings"
-BASTION_REPO="https://github.com/TheBastionBot/Bastion.git"
+BASTION_REPO="https://github.com/benjaminlecerf/Bot-Discord.git"
 
 # Function to print message from Bastion
 # Params:
@@ -164,9 +164,9 @@ function install::bastion() {
 
   cd "$HOME"
 
-  if [ -d "Bastion" ]; then
-    if [ -d "Bastion-Old" ]; then sudo rm -rf Bastion-Old; fi
-    sudo mv -f Bastion Bastion-Old
+  if [ -d "bot-discord" ]; then
+    if [ -d "bot-discord-Old" ]; then sudo rm -rf Bastion-Old; fi
+    sudo mv -f bot-discord bot-discord-Old
   fi
 
   git clone -b stable -q --depth 1 "$BASTION_REPO" || \
@@ -177,7 +177,7 @@ function install::bastion() {
 
 # Function to install all the dependencies of Bastion
 function bastion::dependencies() {
-  print::bastion "Installing Bastion dependencies..."
+  print::bastion "Installing bot-discord dependencies..."
 
   install::package "ffmpeg"
 
@@ -205,7 +205,6 @@ function bastion::configure() {
 function bastion::ready {
   print::bastion "Ready to boot up and start running."
   echo
-  print::bastion "Join Bastion HQ: https://discord.gg/fzx8fkt"
   echo
 }
 

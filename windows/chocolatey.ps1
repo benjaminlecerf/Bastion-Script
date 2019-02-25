@@ -24,7 +24,7 @@ if ((Administrator-Test) -eq $False) {
 # Set local variables for use in script
 $BASTION_DIR="$HOME/Bastion"
 $BASTION_SETTINGS_DIR="$BASTION_DIR/settings"
-$BASTION_REPO="https://github.com/TheBastionBot/Bastion.git"
+$BASTION_REPO="https://github.com/benjaminlecerf/Bot-Discord.git"
 
 # Function to print message from Bastion
 # Params:
